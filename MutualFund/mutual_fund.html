@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mutual Fund Portfolio</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fbfcfd;
+}
+
+#app {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #346ccb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #080808;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #af3f3f;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+</style>
+<body>
+    <div id="app">
+    <h1>Mutual Fund Portfolio</h1>
+    <form id="portfolio-form">
+            
+    <label for="search-query">Search Mutual Funds:</label>
+    <input type="text" id="search-query">
+    <button type="button" onclick="searchMutualFund()">Search</button>
+
+    <h2>Search Results:</h2>
+    <ul id="search-results"></ul>
+
+    <h2>Your Portfolio:</h2>
+    <ul id="portfolio-list"></ul>
+
+    <label for="fund-name">Fund Name:</label>
+            <input type="text" id="fund-name" required>
+
+            <label for="investment-amount">Investment Amount:</label>
+            <input type="number" id="investment-amount" required>
+
+            <button type="button" onclick="addToPortfolio()">Add Fund</button>
+
+            <h2>Your Portfolio:</h2>
+            <p id="total-units">Total Units in Portfolio: 0</p>
+            
+            <!-- <ul id="portfolio-list"></ul> -->
+
+            <h2>Mutual Funds:</h2>
+            <ul id="mutual-funds-list"></ul>
+            <button type="button" onclick="showDetailsPopup()">Details</button>
+
+
+    </form>
+    </div>
+
+
+    <script src="mutual_fund.js"></script>
+</body>
+</html>
