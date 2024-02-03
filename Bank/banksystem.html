@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BankSystem</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank System</h1>
+        
+        
+        <div id="loanCalculation">
+            <h2>Loan Calculation</h2>
+            <form id="loanForm">
+                <label for="customer_id">Customer ID:</label>
+                <input type="text" id="customer_id" required>
+
+                <label for="loan_amount">Loan Amount:</label>
+                <input type="number" id="loan_amount" required>
+
+                <label for="loan_period">Loan Period (in months):</label>
+                <input type="number" id="loan_period" required>
+
+                <label for="interest_rate">Rate of Interest (%):</label>
+                <input type="number" id="interest_rate" step="0.01" required>
+
+                <button type="button" onclick="calculateLoan()">Calculate</button>
+            </form>
+
+            <div id="loan_result">
+                <h3>Loan Summary</h3>
+                <p>Total Amount to be Paid: <span id="total_amount"></span></p>
+                <p>Monthly EMI: <span id="monthly_emi"></span></p>
+            </div>
+        </div>
+
+        
+        <div id="paymentSection">
+            <h2>Payment</h2>
+            <label for="lump_sum_payment">Lump Sum Payment:</label>
+            <input type="number" id="lump_sum_payment">
+            <button type="button" onclick="makePayment()">Make Payment</button>
+        </div>
+
+        
+        <div id="ledger">
+            <h2>Loan Ledger</h2>
+            <label for="loan_id_ledger">Loan ID:</label>
+            <input type="text" id="loan_id_ledger" required>
+            <button type="button" onclick="viewLedger()">View Ledger</button>
+            <div id="ledger_result">
+                
+            </div>
+        </div>
+
+        
+        <div id="accountOverview">
+            <h2>Account Overview</h2>
+            <label for="customer_id_account">Customer ID:</label>
+            <input type="text" id="customer_id_account" required>
+            <button type="button" onclick="viewAccountOverview()">View Account Overview</button>
+            <div id="account_overview_result">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
