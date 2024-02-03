@@ -1,1 +1,3 @@
-Assignments for Web Development. I have used HTML, CSS and Javascript also used MySQL for Piggy Bank project and due to some errors I have used dummy data for Bank System project
+Assignments submission for Web Development. I have used HTML, CSS and Javascript.
+Used MySQL for Piggy Bank project and 
+Due to some errors I have used dummy data for Bank System project
